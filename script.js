@@ -48,3 +48,50 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
 clearBtn.addEventListener("click", () => {
   historyList.innerHTML = "";
 });
+//copy counter
+const copyCountEl = document.getElementById("copyCount");
+let copyCount = 0;
+
+document.querySelectorAll(".copy-btn").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    copyCount++;
+    copyCountEl.textContent = copyCount;
+  });
+});
+// call button alert
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".call-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const card = btn.closest(".bg-white");
+      const serviceName = card.querySelector("h2").textContent;
+      const number = card.querySelector("p.font-bold").textContent;
+
+      alert(`📞 Calling ${serviceName} (${number})...`);
+    });
+  });
+});
+
+//coin
+document.addEventListener("DOMContentLoaded", () => {
+  const coinCountEl = document.getElementById("coinCount");
+  let coins = parseInt(coinCountEl.textContent);
+
+  document.querySelectorAll(".call-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      if (coins < 20) {
+        alert("You haven't enough coin. For calling you need min 20 coin.");
+        return;
+      }
+
+      const card = btn.closest(".bg-white");
+      const serviceName = card.querySelector("h2").textContent;
+      const number = card.querySelector("p.font-bold").textContent;
+
+      coins -= 20;
+      coinCountEl.textContent = coins;
+
+      // alert message
+      alert(`📞 Calling ${serviceName} (${number})...`);
+    });
+  });
+});
