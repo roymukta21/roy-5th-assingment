@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Service Directory</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center bg-gray-100 p-4 shadow">
+      <div class="flex items-center gap-1">
+        <!-- left part -->
+        <img
+          src="./B12-A5-Emergency-Hotline/assets/logo.png"
+          class="h-[30px]"
+          alt=""
+        />
+        <h1 class="font-bold text-green-800">Emergency <br />Service</h1>
+      </div>
+
+      <!-- Right part -->
+      <div class="flex gap-4 items-center">
+        <!-- Heart count -->
+        <div class="bg-green-100 rounded-2xl px-2 py-1">
+          <span id="heartCount" class="font-bold">0</span>
+
+          <span id="heartIcon" class="cursor-pointer text-red-500 text-xl"
+            >❤️</span
+          >
+        </div>
+
+        <!-- coin count -->
+        <div class="flex gap-1 bg-green-100 rounded-2xl px-2 py-1">
+          <span id="coinCount" class="font-bold">100</span>
+          <img
+            src="./B12-A5-Emergency-Hotline/assets/coin.png"
+            class="h-[20px]"
+            alt=""
+          />
+        </div>
+        <!-- copy count -->
+        <div class="bg-green-600 text-white rounded-2xl px-2 py-1">
+          <h2>0 Copy</h2>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <div
+      style="
+        background: linear-gradient(
+          to right,
+          rgb(1, 59, 41, 1),
+          rgba(0, 103, 71, 1),
+          rgb(1, 50, 35, 1)
+        );
+      "
+      class="grid place-items-center text-center"
+    >
+      <img
+        src="./B12-A5-Emergency-Hotline/assets/logo-dark.png"
+        class="h-[92px]"
+        alt=""
+      />
+      <h1 class="font-bold text-white">Emergency Service Directory</h1>
+      <p class="text-white">
+        Government Emergency Services at Your Fingertip – A Project by
+        Government of the People’s Republic of Bangladesh
+      </p>
+    </div>
+
+    <!-- Main section -->
+    <div class="bg-green-50 px-4 py-6 grid grid-cols-12 gap-4">
+      <!-- Card Section -->
+      <div
+        class="col-span-12 md:col-span-9 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        <div id="all" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/emergency.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">National Emergency Number</h2>
+          <p class="text-gray-500 text-sm">National Emergency Service</p>
+          <p class="font-bold text-lg mt-1">999</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >All</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="police" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/police.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Police Helpline Number</h2>
+          <p class="text-gray-500 text-sm">Police</p>
+          <p class="font-bold text-lg mt-1">999</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >Police</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="fire" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/fire-service.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Fire Service Number</h2>
+          <p class="text-gray-500 text-sm">Fire Service</p>
+          <p class="font-bold text-lg mt-1">999</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >Fire</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="health" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/ambulance.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Ambulance Service</h2>
+          <p class="text-gray-500 text-sm">Ambulance</p>
+          <p class="font-bold text-lg mt-1">1994-999999</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >Health</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="w&c" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/emergency.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Women & Child Helpline</h2>
+          <p class="text-gray-500 text-sm">Women & Child Helpline</p>
+          <p class="font-bold text-lg mt-1">109</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >Help</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="antiC" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/emergency.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Anti-Corruption Helpline</h2>
+          <p class="text-gray-500 text-sm">Anti-Corruption</p>
+          <p class="font-bold text-lg mt-1">106</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >Govt.</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="eletricity" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/emergency.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Electricity Helpline</h2>
+          <p class="text-gray-500 text-sm">Electricity Outage</p>
+          <p class="font-bold text-lg mt-1">16216</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >Electricity</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="brac" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/brac.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Brac Helpline</h2>
+          <p class="text-gray-500 text-sm">Brac</p>
+          <p class="font-bold text-lg mt-1">16445</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >NGO</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+        <div id="rail" class="bg-white p-4 rounded-lg shadow relative">
+          <div class="flex justify-between items-start">
+            <img
+              src="./B12-A5-Emergency-Hotline/assets/Bangladesh-Railway.png"
+              class="h-10 w-10"
+              alt=""
+            />
+            <span class="cursor-pointer text-gray-400 text-xl card-heart"
+              >♡</span
+            >
+          </div>
+          <h2 class="font-bold mt-2">Bangladesh Railway Helpline</h2>
+          <p class="text-gray-500 text-sm">Bangladesh Railway</p>
+          <p class="font-bold text-lg mt-1">163</p>
+          <span
+            class="text-xs bg-gray-200 px-2 py-1 rounded-full mt-1 inline-block"
+            >Travel</span
+          >
+          <div class="flex gap-2 mt-4">
+            <button
+              class="flex-1 bg-gray-100 rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="copy-outline"></ion-icon>Copy
+            </button>
+            <button
+              class="call-btn flex-1 bg-green-500 text-white rounded-lg py-1 flex items-center justify-center gap-1 text-sm"
+            >
+              <ion-icon name="call-outline"></ion-icon>Call
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- History Section -->
+      <div class="col-span-12 md:col-span-3 bg-white p-4 rounded-lg shadow">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="font-bold flex items-center gap-1">⏰ Call History</h2>
+          <button
+            class="clear-btn bg-green-500 text-white px-3 py-1 rounded-lg"
+          >
+            Clear
+          </button>
+        </div>
+        <div id="historyList" class="space-y-2 text-sm text-gray-700">
+          <!-- Call history items dynamically added here -->
+        </div>
+      </div>
+    </div>
+    <!-- for Ionicons Icon -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- heart counter -->
+    <script>
+      const heartCountEl = document.getElementById("heartCount");
+      let heartCount = 0;
+      const cardHearts = document.querySelectorAll(".card-heart");
+      document.addEventListener("click", (e) => {
+        if (e.target.classList.contains("card-heart")) {
+          heartCountEl.textContent = ++heartCount;
+          e.target.classList.toggle("text-red-500");
+        }
+      });
+    </script>
+
+    <!-- call section -->
+    <script>
+      const historyList = document.getElementById("historyList");
+      const clearBtn = document.querySelector("button");
+
+      // Handle Call button clicks
+      document.querySelectorAll(".call-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          const card = btn.closest(".bg-white");
+          const serviceName = card.querySelector("h2").textContent;
+          const number = card.querySelector("p.font-bold").textContent;
+
+          //  call Time
+          const time = new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+          });
+
+          //   new enter
+          const entry = document.createElement("div");
+          entry.className =
+            "border-b border-gray-200 pb-1 flex justify-between items-center";
+          entry.innerHTML = `
+        <div>
+          <span class="font-bold">${serviceName}</span> 
+          <span class="text-gray-500">(${number})</span>
+        </div>
+        <span class="text-xs text-gray-400">${time}</span>
+      `;
+          historyList.prepend(entry);
+        });
+      });
+
+      // Handle Clear button
+      clearBtn.addEventListener("click", () => {
+        historyList.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>
