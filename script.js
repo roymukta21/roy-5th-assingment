@@ -48,16 +48,48 @@ document.querySelectorAll(".call-btn").forEach((btn) => {
 clearBtn.addEventListener("click", () => {
   historyList.innerHTML = "";
 });
-//copy counter
+// //copy counter
+// const copyCountEl = document.getElementById("copyCount");
+// let copyCount = 0;
+
+// document.querySelectorAll(".copy-btn").forEach((btn) => {
+//   btn.addEventListener("click", function () {
+//     copyCount++;
+//     copyCountEl.textContent = copyCount;
+//   });
+// });
+
+//make copy
+// copy counter
 const copyCountEl = document.getElementById("copyCount");
 let copyCount = 0;
 
 document.querySelectorAll(".copy-btn").forEach((btn) => {
   btn.addEventListener("click", function () {
-    copyCount++;
-    copyCountEl.textContent = copyCount;
+    // find service number
+    const card = btn.closest(".bg-white");
+    const number = card.querySelector("p.font-bold").textContent;
+
+    // Copy on clipboard
+    navigator.clipboard
+      .writeText(number)
+      .then(() => {
+        // Copy counter for increase
+        copyCount++;
+        copyCountEl.textContent = copyCount;
+
+        // animation
+        btn.textContent = "Copied!";
+        setTimeout(() => {
+          btn.innerHTML = '<ion-icon name="copy-outline"></ion-icon>Copy';
+        }, 1000);
+      })
+      .catch((err) => {
+        console.error("Copy failed: ", err);
+      });
   });
 });
+
 // call button alert
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".call-btn").forEach((btn) => {
