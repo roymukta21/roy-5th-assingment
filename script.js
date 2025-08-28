@@ -89,9 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       coins -= 20;
       coinCountEl.textContent = coins;
-
-      // alert message
-      alert(`📞 Calling ${serviceName} (${number})...`);
     });
   });
 });
