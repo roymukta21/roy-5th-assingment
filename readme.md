@@ -2,25 +2,28 @@
 
 getElementById("id") → selects one element by its unique ID. Returns a single element.
 
-getElementsByClassName("class") → selects all elements with that class. Returns an HTMLCollection (like an array but not exactly).
+getElementsByClassName("class") → selects all elements with that class. Returns an HTMLCollection .
 
 querySelector("selector") → selects the first element that matches any CSS selector.
 
-querySelectorAll("selector") → selects all elements that match a CSS selector. Returns a NodeList (can loop with forEach).
+querySelectorAll("selector") → selects all elements that match a CSS selector. Returns a NodeList .
 
 2. How to create and insert a new element into the DOM:
 
-// 1. Create element
+# 1. Create element
+
 let newDiv = document.createElement("div");
 
-// 2. Add content or attributes
+# 2. Add content or attributes
+
 newDiv.textContent = "Hello World!";
 newDiv.className = "my-class";
 
-// 3. Insert into DOM
-document.body.appendChild(newDiv); // adds at the end of body
+# 3. Insert into DOM
 
-You can also use insertBefore or prepend to place it elsewhere.
+document.body.appendChild(newDiv);
+
+It also use insertBefore or prepend to place it elsewhere.
 
 3. Event Bubbling:
    When you click an element, the event starts at that element and then bubbles up through its parent elements, all the way to <html>.
